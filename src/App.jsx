@@ -6,8 +6,8 @@ import store from './redux/store'
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <IndexRouter></IndexRouter>
+    <Provider store={store} className="Provider" >
+      <IndexRouter  className="IndexRouter" ></IndexRouter>
     </Provider>
 
   )

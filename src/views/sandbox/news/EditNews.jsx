@@ -2,7 +2,7 @@ import React, { useState,useRef } from 'react'
 import { Steps, Button, Form, Input, Select, message, notification } from 'antd';
 import NewsEditor from '../../../components/newseditor/NewsEditor'
 import style from './EditNews.module.css'
-import axios from 'axios';
+import axios from '../../../util/http';
 
 const { Step } = Steps;
 const { Option } = Select

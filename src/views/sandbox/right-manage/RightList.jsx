@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Table, Tag, Button, Modal, Popover,Switch } from 'antd'
-import axios from 'axios';
+import axios from '../../../util/http';
 import { DeleteOutlined, EditOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
 
 const { confirm } = Modal
@@ -56,7 +56,7 @@ export default function RightList() {
     console.log("delete", item)
     // 当前页面同步状态+后端同步
     setDataSource(dataSource.filter(data => data.key !== item.key))
-    axios.delete(`http://localhost:5000/rights/${item.id}`)
+    axios.delete(`/rights/${item.id}`)
 
   }
   const switchMethod=(item)=>{
